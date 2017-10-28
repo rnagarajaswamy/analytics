@@ -1,1 +1,1 @@
-# analytics
+# Basic configuration details
