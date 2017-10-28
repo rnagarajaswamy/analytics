@@ -95,5 +95,9 @@ export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 6.  stop-dfs.sh
 7.  stop-yarn.sh
 
+/**********************************************************************************************************
+		Mapred code
+***********************************************************************************************************/
 Runningg mapreduce in python
 http://www.michael-noll.com/tutorials/writing-an-hadoop-mapreduce-program-in-python/
+
