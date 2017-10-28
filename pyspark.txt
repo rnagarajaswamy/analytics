@@ -1,0 +1,40 @@
+/**********************************************************************************************************
+		Prerequisites
+***********************************************************************************************************/
+1. Check latest JAVA is installed JAVA 7 or higher
+2. Check Python 3 is installed
+/**********************************************************************************************************
+		Install and configure hadoop
+***********************************************************************************************************/
+1.  wget http://ftp.wayne.edu/apache/spark/spark-2.2.0/spark-2.2.0-bin-hadoop2.7.tgz
+2.  tar -vzxf spark-2.2.0-bin-hadoop2.7.tgz
+3.  mv spark-2.2.0-bin-hadoop2.7/* app/spark/
+4.  pip install --upgrade pip
+5.  pip3 install jupyter
+6.  jupyter notebook ( this is to check jupyter is working or not )
+7.  sudo apt-get install scala
+8.  pip3 install py4j
+9.  pip3 install findspark
+10. nano ~/.bashrc
+
+# spark configuration
+export SPARK_HOME=/home/hduser/app/spark
+export PATH=$PATH:$SPARK_HOME/bin
+export PYTHONPATH=$SPARK_HOME/python:$PYTHONPATH
+export PYSPARK_DRIVER_PYTHON="jupyter"
+export PYSPARK_DRIVER_PYTHON_OPTS="notebook"
+export PYSPARK_PYTHON=python3
+
+11. spark-shell
+
+Miscellaneous
+-------------
+To access Jupyter over the SSH tunnel on Windows you will need to 1) initiate the tunnel in Putty and 2) configure your web browser to send traffic over the tunnel.
+
+To Initiate the tunnel in Putty: 1) Navigate to Connection-->SSH-->Tunnels 2) Put in the local address for which you want to forward traffic 3) Click the 'Dynamic' radio button 4) Click the 'Add' button 5) Click the 'Open' button to initiate the connection
+
+For Chrome and Internet Explorer 1) Use the Start->Run menu to run inetcpl.cpl 2) In the 'Connections' tab click 'LAN Settings' 3) Click on the 'Use a proxy server for your LAN' check box 4) Click 'Advanced' 5) In the 'Socks' field type '127.0.0.1' and add the port that you chose above 6) Apply these changes by clicking the 'Ok' button
+
+You should now be able to access Jupyter over the SSH tunnel.
+
+
