@@ -1,0 +1,39 @@
+# python default version
+alias python=python3
+
+# hadoop configuration
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+export HADOOP_HOME=/home/hduser/app/hadoop
+export PATH=$PATH:$HADOOP_HOME/bin
+export PATH=$PATH:$HADOOP_HOME/sbin
+export HADOOP_MAPRED_HOME=$HADOOP_HOME
+export HADOOP_COMMON_HOME=$HADOOP_HOME
+export HADOOP_HDFS_HOME=$HADOOP_HOME
+export YARN_HOME=$HADOOP_HOME
+export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native
+export HADOOP_OPTS="-Djava.library.path=$HADOOP_HOME/lib"
+
+# zookeeper configuration
+export ZOOKEEPER_HOME=/home/hduser/app/zookeeper
+export PATH=$PATH:$ZOOKEEPER_HOME/bin
+
+# spark configuration
+export SPARK_HOME=/home/hduser/app/spark
+export PATH=$PATH:$SPARK_HOME/bin
+export PYTHONPATH=$SPARK_HOME/python:$PYTHONPATH
+export PYSPARK_DRIVER_PYTHON="jupyter"
+export PYSPARK_DRIVER_PYTHON_OPTS="notebook"
+export PYSPARK_PYTHON=python3
+
+# kafka configuration
+export KAFKA_HOME=/home/hduser/app/kafka
+export PATH=$PATH:$KAFKA_HOME/bin
+
+
+# druid configuration
+export DRUID_HOME=/home/hduser/app/druid
+export PATH=$PATH:$DRUID_HOME/bin
+
+# tranquility configuration
+export TRANQUALITY_HOME=/home/hduser/app/tranquility
+export PATH=$PATH:$TRANQUALITY_HOME/bin
