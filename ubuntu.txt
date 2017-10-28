@@ -1,0 +1,112 @@
+/**********************************************************************************************************
+												Linux OS commands
+***********************************************************************************************************/
+Sl#	Command									            Description									
+---	-------------------------------------------------	----------------------------------------------------
+1	sudo apt-get update						            Update OS with latest service packs			 
+2	sudo apt-get install default-jdk		            Install default version of JAVA
+3 	sudo apt-get install ssh                            Install SSH
+4   java -version							            Check current version of JAVA installed
+5	which javac											To know the JAVAC location
+6 	readlink -f /usr/bin/javac							<< Need description >>
+7   which ssh                                           Display directory path of SSH
+9   which sshd                                          Display directory path of SSHD
+9	sudo addgroup < group_name >                        To add new user group
+10  sudo adduser --ingroup < group_name > < user_name > Adding user to group
+11  mv < Source_file_path > < Destination_file_path >   Move files from one locatio to another
+12  wget < url.tar.gz >                                 To download application from web location
+13  tar xvzf < file_name.tar.gz >                       Unzip/ extract the .tar.gz file
+14  sudo su < user_name >                               Switch to super user
+15  sudo chown -R <user>:<group> <folder_location>      Giving access to the user for a folder
+16  sudo mkdir -p < directory name/path > 				Create a directory
+17	cp < from file name > < to file name >				Copy the file to destination 	
+18	ls 													List the files and folders in a directory
+19 	rm -r < directory / file> 							Remove file / directory recursively
+20 	vi < file_name > 									Edit file in vi editor
+21	cd < directory path >								Change directory
+22	pwd													It gives the current / present working directory
+23	sudo reboot -i NOW									Reboot machine
+24 	Shutdown											Shoutdown machine
+25 	compgen -u 											To list all user
+26 	compgen -g 											To list all group
+27 	cat /etc/group 										To list all group
+28 	cat /etc/passwd 									To list all user
+29  /ect/sudoer.d 										user permissions
+30 	usermod -aG sudo < username >						Adding user to group
+31 	visudo												User credential option detaols ( eg hduser 	(ALL) NOPASSWD:ALL )
+32 	update-alternatives --config java					get the JAVA path and update the JAVA path
+33 	alias <newname>=<oldname>							alias python=python3
+34 	 
+
+/**********************************************************************************************************
+												Install JAVA
+***********************************************************************************************************/
+sudo apt-get install default-jdk
+
+or
+
+sudo apt-get install software-properties-common python-software-properties
+sudo add-apt-repository ppa:webupd8team/java
+sudo apt update; sudo apt install oracle-java8-installer
+javac -version
+sudo apt install oracle-java8-set-default
+update-alternatives --config java
+
+
+/**********************************************************************************************************
+												Install pip
+***********************************************************************************************************/
+sudo apt-get install software-properties-common
+sudo apt-add-repository universe
+sudo apt-get update
+sudo apt-get install python-pip
+
+
+/**********************************************************************************************************
+												Install SSH
+***********************************************************************************************************/
+sudo apt-get install ssh
+ssh-keygen -t rsa -P ""
+cat $HOME/.ssh/id_rsa.pub >> $HOME/.ssh/authorized_keys
+ssh localhost
+
+info: sed -i '6d' ~/.ssh/known_hosts
+
+Other way
+---------
+sudo apt-get -y install openssh-server
+sudo service ssh start
+ssh-keygen -t rsa
+ssh-copy-id user@server_ip_address or hostname
+
+vi /etc/ssh/sshd_config
+PubkeyAuthentication yes
+AuthorizedKeyFile    .ssh/authorized_keys
+PasswordAuthentication no
+sudo service ssh restart
+
+Uninstall ssh
+-------------
+To remove just ssh package itself from Ubuntu 16.04 (Xenial Xerus) execute on terminal:
+
+sudo apt-get remove ssh
+Uninstall ssh and it's dependent packages
+To remove the ssh package and any other dependant package which are no longer needed from Ubuntu Xenial.
+
+sudo apt-get remove --auto-remove ssh
+Purging ssh
+If you also want to delete configuration and/or data files of ssh from Ubuntu Xenial then this will work:
+
+sudo apt-get purge ssh
+To delete configuration and/or data files of ssh and it's dependencies from Ubuntu Xenial then execute:
+
+sudo apt-get purge --auto-remove ssh
+
+/**********************************************************************************************************
+												Error and Warning
+***********************************************************************************************************/
+Warning:To run a command as administrator (user "root"), use "sudo <command>".  
+See "man sudo_root" for details.
+
+run this : touch ~/.sudo_as_admin_successful
+
