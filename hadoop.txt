@@ -92,8 +92,12 @@ export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 7507 DataNode
 
 5.  Access the link http://localhost:50070/ to see the daemons
-6.  stop-dfs.sh
-7.  stop-yarn.sh
+6.  hdfs dfs -mkdir /user
+7.  hdfs dfs -mkdir /user/<<username>>	
+
+8.  stop-dfs.sh
+9.  stop-yarn.sh
+
 
 /**********************************************************************************************************
 		Mapred code
