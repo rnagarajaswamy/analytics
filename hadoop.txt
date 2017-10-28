@@ -105,3 +105,15 @@ export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 Runningg mapreduce in python
 http://www.michael-noll.com/tutorials/writing-an-hadoop-mapreduce-program-in-python/
 
+MapReduce Python
+hadoop jar contrib/streaming/hadoop-*streaming*.jar \
+-file /home/hduser/mapper.py    -mapper /home/hduser/mapper.py \
+-file /home/hduser/reducer.py   -reducer /home/hduser/reducer.py \
+-input /user/hduser/wordcount/input/* -output /user/hduser/wordcount/output
+
+
+hadoop jar /usr/local/ecosystem/application/hadoop/share/hadoop/tools/lib/hadoop-streaming-2.8.1.jar \
+-file /home/hduser/mapper.py    -mapper /home/hduser/mapper.py \
+-file /home/hduser/reducer.py   -reducer /home/hduser/reducer.py \
+-input /user/hduser/wordcount/input/* -output /user/hduser/wordcount/output
+
