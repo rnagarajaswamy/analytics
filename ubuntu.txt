@@ -52,6 +52,13 @@ javac -version
 sudo apt install oracle-java8-set-default
 update-alternatives --config java
 
+# java environment variable
+---------------------------
+sudo nano /etc/environment
+JAVA_HOME="/usr/lib/jvm/java-8-oracle"
+source /etc/environment
+echo $JAVA_HOME
+
 
 /**********************************************************************************************************
 					Install pip
