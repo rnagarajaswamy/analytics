@@ -1,0 +1,20 @@
+mkdir app
+mkdir working
+mkdir hdfs
+mkdir zoo
+cd app
+mkdir hadoop
+mkdir kafka
+mkdir spark
+mkdir druid
+mkdir tranquility
+mkdir zookeeper
+cd ..
+cd hdfs
+mkdir datanode
+mkdir namenode
+mkdir tmp
+cd ..
+
+
+
