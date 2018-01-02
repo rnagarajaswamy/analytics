@@ -110,6 +110,15 @@ To delete configuration and/or data files of ssh and it's dependencies from Ubun
 sudo apt-get purge --auto-remove ssh
 
 /**********************************************************************************************************
+					Miscellaneous
+**********************************************************************************************************/
+
+1. Start kafka background
+$KAFKA_HOME/bin/zookeeper-server-start.sh -daemon config/zookeeper.properties
+$KAFKA_HOME/bin/kafka-server-start.sh -daemon config/server.properties
+
+
+/**********************************************************************************************************
 					Error and Warning
 ***********************************************************************************************************/
 Warning:To run a command as administrator (user "root"), use "sudo <command>".  
