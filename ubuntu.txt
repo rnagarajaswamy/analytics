@@ -36,7 +36,9 @@ Sl#	Command									            Description
 31 	visudo							User credential option detaols ( eg hduser 	(ALL) NOPASSWD:ALL )
 32 	update-alternatives --config java			get the JAVA path and update the JAVA path
 33 	alias <newname>=<oldname>				alias python=python3
-34 	 
+34 	su - <username>						To switch user
+35	free -m							To check free memory
+36	
 
 /**********************************************************************************************************
 					Install JAVA
