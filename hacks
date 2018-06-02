@@ -1,2 +1,17 @@
 How To Connect To Vagrant Using Putty
 *************************************
+
+Private key file location : .vagrant\machines\default\virtualbox
+
+Step 1:   Start PuTTYgen
+Step 2:   From menu select File > Open private key and navigate to the above path
+Step 3:   Select the file insecure_private_key file (if no file is visible, change the file types to All File) select file insecure_private_key and open
+Step 4:   Click on the Save private key button
+
+Step 5:   Then, launch PuTTY and enter the following connection information:
+Step 6:   - Host Name: 127.0.0.1
+          - Port: 2222
+          - Connection type: SSH
+          - Connection Data Auto-login username: vagrant
+          - Connection/SSH Auth Private key file for authentication: Click on the Browse button and find the .ppk private key you just 
+            converted
